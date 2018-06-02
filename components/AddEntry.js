@@ -74,8 +74,11 @@ export default class AddEntry extends Component {
     return (
       <View>
         <DateHeader date={(new Date()).toLocaleDateString()}/>
+
         {Object.keys(metaInfo).map((key) => {
+          // get data from mataInfo object
           const { getIcon, type, ...rest } = metaInfo[key]
+          // get value from this state
           const value = this.state[key]
 
           return (
